@@ -8,6 +8,7 @@
   background-image: var(--background-gradient);
   background-attachment: fixed;
   background-size: cover;
+  font-variation-settings: var(--normal-weight);
 }
 
 .header {
@@ -218,7 +219,8 @@
   .button__save {
     height: 84px;
     padding: 0 20px 15px 20px;
-    inline-size: 310px
+    inline-size: 310px;
+
   }
 
   .button__icon {
