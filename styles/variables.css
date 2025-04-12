@@ -3,8 +3,8 @@
   --main-font: 'Inter-Variable';
   --main-text-color: black;
   --accent-font: 'PressStart2P';
-  --normal-weight: 400;
-  --bold-weight: 700;
+  --normal-weight: 'wght' 400;
+  --bold-weight: 'wght' 700;
   --border: 2px solid black;
   --text-stroke-color: white;
   --background-gradient: repeating-linear-gradient(to right, #d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px),
