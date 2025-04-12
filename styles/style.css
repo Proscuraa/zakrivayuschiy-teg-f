@@ -1,16 +1,299 @@
-/* Здесь вы напишете основную часть стилей страницы.
-
-Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
-✦ like-icon — для svg-иконки анимированного сердца
-✦ card__like-button — для кнопки Like рядом с иконкой
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
-✦ button__text — для обозначения текстового элемента внутри кнопки
-
-*/
 
 .page {
+  display: grid;
+  justify-content: center;
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--main-font), "sans-serif";
+  background-image: var(--background-gradient);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: clamp(23.4375rem, 16.3732rem + 30.1408vw, 43.5rem);
+  height: clamp(20.4375rem, 19.5352rem + 3.8498vw, 23rem);
+  border: var(--border);
+  font-family: var(--accent-font), "sans-serif";
+  font-weight: var(--normal-weight);
+  text-transform: uppercase;
+  margin-block-start: 100px;
+  margin-block-end: 102px;
+  background-color: var(--main-color);
+}
+
+.header_title {
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  margin-block-end: 20px;
+}
+
+.header_subtitle {
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+}
+
+.card {
+  width: clamp(23.4375rem, 16.3732rem + 30.1408vw, 43.5rem);
+  border: var(--border);
+  background-color: var(--main-color);
+}
+
+.card_text {
+  margin: 27px 25px 27px 25px;
+  font-weight: var(--normal-weight);
+  font-family: var(--main-font), "sans-serif";
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.card_image {
+  width: 100%;
+  height: clamp(23.1875rem, 16.0352rem + 30.5164vw, 43.5rem);
+  display: block;
+  border: 2px solid black;
+}
+
+.blur__image {
+  filter: blur(6px);
+}
+
+.sepia__image {
+  filter: sepia(0.8);
+}
+
+.opacity__image {
+  filter: opacity(50%);
+}
+
+.grayscale__image {
+  filter: grayscale(80%);
+}
+
+.contrast__image {
+  filter: contrast(150%);
+}
+
+.brithness__image {
+  filter: brightness(60%);
+}
+
+.filter__image {
+  filter: invert(85%) blur(2px) grayscale(50%);
+}
+
+.button__container {
+  display: flex;
+  justify-content: end;
+  align-content: end;
+}
+
+.button__text {
+  color: var(--main-text-color);
+}
+
+.card__like-button {
+  width: 130px;
+  height: 38px;
+  line-height: 90%;
+  font-size: 14px;
+  font-weight: var(--normal-weight);
+  margin-inline-end: 25px;
+  margin-block-end: 25px;
+}
+
+.button {
+  font-family: var(--accent-font), "sans-serif";
+  background-color: white;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.card_title {
+  font-size: 18px;
+  line-height: 100%;
+  font-weight: var(--bold-weight);
+  min-height: 31px;
+  padding-block-start: 5px;
+  padding-inline-start: 8px;
+}
+
+.content {
+  display: grid;
+  gap: 50px;
+}
+
+.label {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  font-family: var(--accent-font), "sans-serif";
+  font-size: 14px;
+  line-height: 100%;
+  font-weight: var(--normal-weight);
+  opacity: 50%;
+}
+
+@supports (-webkit-text-stroke: 1px var(--text-stroke-color)) {
+  .label {
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+    -webkit-text-fill-color: black;
+  }
+}
+
+.img__container {
+  position: relative;
+}
+
+.modal__save {
+  width: 353px;
+  height: 191px;
+  padding: 30px;
+}
+
+.button__save {
+  display: flex;
+  height: 55px;
+  font-size: 14px;
+  line-height: 90%;
+  justify-self: center;
+  align-items: center;
+  inline-size: 335px;
+  margin-block-end: 103px;
+  background-color: var(--main-color);
+  padding-block-end: 10px;
+  padding-inline-end: 10px;
+  gap: 10px;
+}
+
+.dialog__text {
+  display: flex;
+  gap: 20px;
+  font-family: var(--accent-font), "sans-serif";
+  font-size: 14px;
+  line-height: 150%;
+  text-transform: uppercase;
+  margin-block-end: 30px;
+  align-items: center;
+}
+
+.modal__save::backdrop {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.button__ok {
+  width: 293px;
+  height: 38px;
+}
+
+.button__icon {
+  min-width: 21px;
+  min-height: 21px;
+  margin-inline-start: 10px;
+}
+
+.dialog_icon {
+  min-width: 40px;
+  min-height: 40px;
+
+}
+
+@media (width <= 375px) {
+  .page {
+    width: 100%;
+  }
+
+  .card:first-child .card_title {
+    min-height: 52px;
+    padding-inline-end: 5px;
+  }
+
+  .label {
+    right: 13px;
+  }
+
+  .button__save {
+    height: 84px;
+    padding: 0 20px 15px 20px;
+    inline-size: 310px
+  }
+
+  .button__icon {
+    min-width: 28px;
+    min-height: 28px;
+    align-self: center;
+    margin-block-end: 10px;
+    margin-inline-end: 10px;
+  }
+
+  .svg__container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    margin-block-start: 14px;
+
+  }
+}
+
+.button:focus {
+  outline: none;
+  box-shadow: 2px 2px 0 var(--accent-color);
+  transition: box-shadow 0.3s ease;
+}
+
+.button:before {
+  content: "";
+  background-color: var(--accent-color);
+  transform: scaleX(0);
+  transition: transform 0.5s ease-in-out;
+  position: absolute;
+  transform-origin: left;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+.button:hover::before {
+  transform: scaleX(1);
+}
+
+.button .button__text {
+  position: relative;
+  z-index: 1;
+  mix-blend-mode: difference;
+  color: var(--text-color);
+}
+
+.button .button__icon {
+  mix-blend-mode: difference;
+  color: var(--text-color);
+}
+
+.card__icon-button {
+  background-color: white;
+  border: none;
+  margin-block-end: 19px;
+  margin-inline-end: 5px;
+  padding:0;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border: 2px solid var(--accent-color);
+  transition: border 0.3s ease;
+  block-size: 38px;
+
+}
+
+.sparks {
+  opacity: 0;
 }

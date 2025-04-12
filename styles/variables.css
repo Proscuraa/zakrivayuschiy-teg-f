@@ -1,1 +1,18 @@
-/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+:root {
+  --main-font: 'Inter-Variable';
+  --main-text-color: black;
+  --accent-font: 'PressStart2P';
+  --normal-weight: 400;
+  --bold-weight: 700;
+  --border: 2px solid black;
+  --text-stroke-color: white;
+  --background-gradient: repeating-linear-gradient(to right, #d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px),
+  repeating-linear-gradient(to bottom, #d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px),
+  linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
+  --main-color: white;
+  --accent-color: #000000;
+  --text-color: white;
+  --contour-heart: #000000;
+  --animation-fill-color: red;
+}
