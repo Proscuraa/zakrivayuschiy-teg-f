@@ -50,10 +50,6 @@
   line-height: 21px;
 }
 
-.button__container {
-  margin-block-start: 29px;
-}
-
 .card_image {
   width: 100%;
   height: clamp(23.1875rem, 16.0352rem + 30.5164vw, 43.5rem);
@@ -95,6 +91,7 @@
   display: flex;
   justify-content: end;
   align-content: end;
+  margin-block-start: 29px;
 }
 
 .button__text {
