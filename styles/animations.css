@@ -55,7 +55,6 @@
   transition: fill 0.3s linear;
 }
 
-
 .like-icon:active .main-body {
   fill: var(--animation-fill-color);
   transition: fill 0.3s linear 0.05s;
@@ -84,4 +83,10 @@
 
 .like-icon.is-liked .sparks {
   animation: sparks 0.3s ease-in 0.3s 1;
+}
+
+.like-icon .contour {
+  fill: var(--contour-heart);
+  transition: fill 0.1s linear;
+
 }
