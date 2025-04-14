@@ -18,7 +18,7 @@
   align-items: center;
   width: clamp(23.4375rem, 16.3732rem + 30.1408vw, 43.5rem);
   padding-block-start: clamp(7.5rem, 7.3239rem + 0.7512vw, 8rem);
-  padding-block-end: clamp(7.5rem, 7.3239rem + 0.7512vw, 8rem);;
+  padding-block-end: clamp(7.5rem, 7.3239rem + 0.7512vw, 8rem);
   border: var(--border);
   font-family: var(--accent-font), sans-serif;
   font-weight: var(--normal-weight);
