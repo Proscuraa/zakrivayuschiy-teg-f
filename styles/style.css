@@ -17,7 +17,8 @@
   justify-content: center;
   align-items: center;
   width: clamp(23.4375rem, 16.3732rem + 30.1408vw, 43.5rem);
-  min-block-size: 368px;
+  padding-block-start: clamp(7.5rem, 7.3239rem + 0.7512vw, 8rem);
+  padding-block-end: clamp(7.5rem, 7.3239rem + 0.7512vw, 8rem);;
   border: var(--border);
   font-family: var(--accent-font), sans-serif;
   font-weight: var(--normal-weight);
@@ -106,7 +107,6 @@
   font-weight: var(--normal-weight);
   margin-inline-end: 25px;
   margin-block-end: 25px;
-  border: var(--border);
 }
 
 .button {
@@ -116,6 +116,7 @@
   z-index: 0;
   overflow: hidden;
   transition: box-shadow 0.3s ease;
+  border: var(--border);
 }
 
 .card_title {
@@ -221,9 +222,6 @@
 }
 
 @media (width <= 375px) {
-  .header {
-    min-block-size: 327px;
-  }
 
   .page {
     width: 100%;
